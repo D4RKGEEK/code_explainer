@@ -20,5 +20,3 @@ def code_explain(code):
         return text
     except Exception as error:
         print(error)
-
-code_explain("hello")
