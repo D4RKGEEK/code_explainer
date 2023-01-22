@@ -1,4 +1,3 @@
-import requests
 import openai
 
 openai.api_key = "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"
