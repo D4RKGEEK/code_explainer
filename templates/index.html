@@ -91,9 +91,8 @@
   <pre data-prefix="$"><code>npm i explain_my_code</code></pre>
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+            </div>
 </section>
-
-
 <section class="bg-white dark:bg-gray-900">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16">
 <div class="flex">
@@ -102,60 +101,31 @@
 
 <form id="code_input" action="/" method="POST">
   <div class="sm:col-span-2">
-    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-    <textarea name="description" id="description" rows="12" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="write your code here"></textarea>
+    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Code</label>
+    <textarea name="description" id="description" rows="12" style="font-family: 'Courier New', Courier, monospace;" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="write your code here"></textarea>
   </div>
-  <br>
+    <br>
   <button type="submit" id="sub_btn" onclick="changeButton()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
       Explain My Code
   </button>
-
 </form>
-                <script>
-
-    var form = document.getElementById("code_input");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        var formData = new FormData(form);
-
-        fetch('/', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            // do something with the response from the server
-            console.log(data);
-        });
-    });
-</script>
-
-            </div>
+        </div>
   </div>
 
-
-
-
   <div class="w-1/2">
-      <br>
-      <br>
-      <div class="invisible">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16">
-<div role="status" class="max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gaqqp-8 xl:gap-0 lg:py-16">
+            <label for="haha" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Explaination</label>
+<div class="mockup-code">
+  <div style="max-width: 500px; overflow: auto; word-wrap: break-word;">
+    <ul style="padding-left: 30px; font-family: 'Courier New', Courier, monospace;">
+      {% for topic in topics %}
+        <li>{{topic}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 </div>
 
 

@@ -4,7 +4,7 @@ openai.api_key = "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"
 
 def code_explain(code):
     try:
-        prompt = f"Expain This Code To A Layman + \n {code}"
+        prompt = f"Expain This Code To A Layman In Steps Or Points "+ code
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt=prompt,
@@ -15,7 +15,6 @@ def code_explain(code):
         presence_penalty=0
         )
         text = response['choices'][0]['text']
-        print(text)
         return text
     except Exception as error:
         print(error)

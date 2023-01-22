@@ -10,7 +10,8 @@ def index():
         code = request.form['description']
         topics = ai.code_explain(code)
         topics = topics.splitlines()
-    return render_template("index.html", topics=topics)
+        return render_template("index.html", topics=topics)
+
 @app.route('/404')
 def error404():
     return render_template("404.html")
