@@ -4,12 +4,12 @@ openai.api_key = "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"
 
 def code_explain(code):
     try:
-        prompt = f"Expain This Code To A Layman In Steps Or Points "+ code
+        prompt = f"Expain Below Code To A Layman In Steps within 250 words \n"+ code
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt=prompt,
         temperature=0.7,
-        max_tokens=256,
+        max_tokens=250,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0
