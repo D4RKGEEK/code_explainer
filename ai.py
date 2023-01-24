@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
 def code_explain(code):
     try:
